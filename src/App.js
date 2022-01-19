@@ -1,4 +1,5 @@
 import Expenses from './components/expenses/Expenses'
+import NewExpenses from './components/NewExpenses/NewExpenses'
 import './App.css'
 
 function App() {
@@ -24,9 +25,13 @@ function App() {
 		},
 	]
 
+
 	return (
 		<div className='App'>
-			<Expenses arrData={expenses} />
+			<NewExpenses/>
+			<Expenses item={expenses}
+			/>
+			
 		</div>
 	)
 }

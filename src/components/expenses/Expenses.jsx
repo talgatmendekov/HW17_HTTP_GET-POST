@@ -5,18 +5,17 @@ import Card from '../UI/Card'
 function Expenses(props){
     return (
         <Card className = 'expenses'>
-            {props.arrData.map((el, id)=>{
-                return (
-                    <ExpenseItem
-                        key = {el.id}
-                        title = {el.title}
-                        date = {el.date}
-                        amount = {el.amount}
-                    />
-
-                )
-
+            {props.item.map((el, index, array)=>{
+                return <ExpenseItem
+                    // key = {Math.random()}
+                    key = {el.id}
+                    title = {el.title}
+                    amount = {el.amount}
+                    date = {el.date}
+                />
             })}
+
+          
         </Card>
 
     )
