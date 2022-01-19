@@ -3,25 +3,25 @@ import './ExpenseItem.css'
 import {ExpenseDate} from './ExpenseDate'
 
 function ExpenseItem(props){
-    const [title, setTitle] = useState(props.title)
-    // let expenseTitle = props.title
+    // const [title, setTitle] = useState(props.title)
+    const expenseTitle = props.title
     const expenseAmount = props.amount
     
    
-    const updateTitleHandler=()=>{
-        // title = 'updated'  - так не сработает
-        setTitle('updated')
-        // console.log(title)
+    // const updateTitleHandler=()=>{
+    //     // title = 'updated'  - так не сработает
+    //     setTitle('updated')
+    //     // console.log(title)
     
-    }
+    // }
     
     return(
         <div className='expense-item'>
             
             <ExpenseDate date= {props.date}/>
-            <h2 className='expense-item__description'>{title}</h2>
+            <h2 className='expense-item__description'>{expenseTitle}</h2>
             <div className='expense-item__price'>{expenseAmount}</div>
-            <button onClick={updateTitleHandler}>Update Title</button>
+            {/* <button onClick={updateTitleHandler}>Update Title</button> */}
         </div>
     )
 }
