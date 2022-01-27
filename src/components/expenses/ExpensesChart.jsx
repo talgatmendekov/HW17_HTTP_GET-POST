@@ -20,8 +20,7 @@ const ExpensesChart = (props) => {
   for (const expense of props.expenses) { // берем через пропс, expenses - массив с объектами(данные с инпутов) и итерируем через цикл for of
         const expenseMonth = expense.date.getMonth(); // Через метод getMonth() получаем индексы Starting at 0 index (January) 
         chartDataPoints[expenseMonth].value += expense.amount; // вызываем вышесозданный нами массив в качестве значения индекса указываем
-                                                                // индекс который мы получили методом getMonth()
-                                                                // обращаемся к value который изначально ноль
+                                                         // обращаемся к value который изначально ноль
                                                                 // добавляем значение и присваиваем константе chartDataPoints результат
                                                                 // PS: значение expense.amount должен быть числом а так с значение с инпута
                                                                 // приходит ввиде строки, сработает конкатинация при  втором сложении поэтому
@@ -29,7 +28,15 @@ const ExpensesChart = (props) => {
         
     }
 
-    return <Chart dataPoints={chartDataPoints}/> // Через пропс даем dataPoints компаненте Chart
+    
+    for (const expense of props.items) { 
+        if (props.select ==='all'){
+            const expenseMonth = expense.date.getMonth();
+            chartDataPoints[expenseMonth].value += expense.amount;
+        }
+        }
+       
+    return <Chart dataPoints={chartDataPoints}/> // Через пропс даем dataPoints компаненте Chart  
 
 
 };
