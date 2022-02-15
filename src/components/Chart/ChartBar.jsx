@@ -7,7 +7,7 @@ const ChartBar = (props) => { // через получает данные с р�
       barFillHeight = Math.round((props.value / props.maxValue) * 100) + '%' // props.maxValue - это общий value a props.value - это отдельные value
   }
 
-  console.log(props.expenses)
+ 
   return (
       <div className='chart-bar'>
           <div className='chart-bar__inner'>

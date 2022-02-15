@@ -48,3 +48,4 @@ function App() { // Функция App это главный компонент 
 }
 
 export default App
+// 
