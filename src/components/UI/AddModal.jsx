@@ -41,7 +41,7 @@ const AddModal = (props) => {
 			</div>
 			<div className='new-expense__actions'>
                 <Button  type = 'submit'onClick ={props.onClick}>Cancel</Button>
-                <Button  type = 'submit'>Add Expense</Button>
+                <Button  type = 'submit'>Add New Expense</Button>
                 
 			</div>
 		</form>

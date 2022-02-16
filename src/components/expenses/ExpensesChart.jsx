@@ -29,12 +29,12 @@ const ExpensesChart = (props) => {
     }
 
     
-    for (const expense of props.items) { 
-        if (props.select ==='all'){
-            const expenseMonth = expense.date.getMonth();
-            chartDataPoints[expenseMonth].value += expense.amount;
-        }
-        }
+    // for (const expense of props.items) { 
+    //     if (props.select ==='all'){
+    //         const expenseMonth = expense.date.getMonth();
+    //         chartDataPoints[expenseMonth].value += expense.amount;
+    //     }
+    //     }
        
     return <Chart dataPoints={chartDataPoints}/> // Через пропс даем dataPoints компаненте Chart  
 
